@@ -1,0 +1,14 @@
+<%= render navbar %>
+<div class="container">
+  <% @partyItems.each do |item| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Item name: <%= item.name %></h5>
+        <p class="card-text">Item description: <%= item.description %></p>
+        <p class="card-text">Price: <%= item.price %></p>
+        <%= link_to "See Item", party_item_path(item), class="btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
