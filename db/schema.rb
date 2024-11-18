@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_18_152159) do
     t.index ["user_id"], name: "index_party_items_on_user_id"
   end
 
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -48,7 +49,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_18_152159) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
+  
   add_foreign_key "orders", "party_items"
   add_foreign_key "orders", "users"
   add_foreign_key "party_items", "users"
