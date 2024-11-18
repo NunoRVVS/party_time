@@ -1,6 +1,6 @@
 require "test_helper"
 
-class PartyItemControllerTest < ActionDispatch::IntegrationTest
+class PartyItemsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
