@@ -16,6 +16,5 @@ Rails.application.routes.draw do
   get "/partyitems/mylistings", to:"partyitems#mylistings", as: "my_listings"
 
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+
 end
