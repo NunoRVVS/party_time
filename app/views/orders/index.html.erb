@@ -3,7 +3,7 @@
   <hr class="my-4">
   <ul>
   <% @orders.each do |order| %>
-  <li><%= link_to "Order ##{order.id}", order_path(order) %> :: <%= order.party_item.name %> starting on: <%= order.start %> </li>
+  <li><%= link_to "Order ##{order.id}", order_path(order) %> :: <%= order.party_item.name %> starting on: <%= order.start_date %> </li>
 
   <% end %>
 </ul>
