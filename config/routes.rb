@@ -10,12 +10,12 @@ Rails.application.routes.draw do
   resources :party_items, only: [:index, :show, :create, :new, :edit] do
     resources :orders, only: [:new, :create]
   end
-  
+
   resources :orders, only: [:index, :show]
+  resources :party_items, only: [:destroy]
 
   get "/partyitems/mylistings", to:"partyitems#mylistings", as: "my_listings"
 
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+
 end
