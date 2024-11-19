@@ -3,6 +3,7 @@ class PartyItemsController < ApplicationController
 
   def index
     @partyItems = PartyItem.all
+    @partyItem = PartyItem.new
   end
 
   def show
