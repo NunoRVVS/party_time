@@ -19,4 +19,3 @@ end
   item= PartyItem.create!( price: rand(30..150), name: Faker::Ancient.god, description: Faker::Books::Dune.quote, user: User.all.sample())
   p item
 end
-Ors
