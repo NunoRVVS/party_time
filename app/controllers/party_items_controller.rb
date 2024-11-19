@@ -30,6 +30,17 @@ class PartyItemsController < ApplicationController
     end
   end
 
+  def edit
+    @party_item = PartyItem.find(params[:id])
+  end
+
+  def update
+    @party_item = PartyItem.find(params[:id])
+    @party_item.update(party_item_params)
+
+    redirect_to party_item_path(@party_item)
+  end
+
   def destroy
     @party_item = PartyItem.find(params[:id])
     @party_item.destroy
