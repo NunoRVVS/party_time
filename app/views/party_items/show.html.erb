@@ -1,12 +1,13 @@
 <div class="container">
   <div class="jumbotron">
-    <h1 class="display-4"><%= @partyItem.name %></h1>
-    <p class="lead"><%= @partyItem.description %></p>
+    <h1 class="display-4"><%= @party_item.name %></h1>
+    <p class="lead"><%= @party_item.description %></p>
     <hr class="my-4">
-    <p>Price: <%= @partyItem.price %></p>
+    <p>Price: <%= @party_item.price %></p>
     <p class="lead">
 
       <%= link_to "Browse more items", party_items_path %>
+      <%= link_to "Delete", party_items_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     </p>
   </div>
 </div>
