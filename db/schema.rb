@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_18_152159) do
   enable_extension "plpgsql"
 
   create_table "orders", force: :cascade do |t|
-    t.date "start"
-    t.date "end"
+    t.date "start_date"
+    t.date "end_date"
     t.integer "amount"
     t.bigint "user_id", null: false
     t.bigint "party_item_id", null: false
