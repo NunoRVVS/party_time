@@ -1,7 +1,10 @@
-<h1>Order</h1>
-<ul>
+<div class="jumbotron" style="width:900px; padding: 20px;">
+  <h1 class="display-4">Order</h1>
+  <hr class="my-4">
+  <ul>
   <% @orders.each do |order| %>
   <li><%= link_to "Order ##{order.id}", order_path(order) %> :: <%= order.party_item.name %> starting on: <%= order.start %> </li>
 
   <% end %>
 </ul>
+</div>
