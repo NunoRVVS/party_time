@@ -18,6 +18,7 @@ class PartyItemsController < ApplicationController
   def create
    @new_item = PartyItem.new(party_item_params)
    @new_item.user = current_user
+   @new_item.save
 
    respond_to do |format|
       if @new_item.save
