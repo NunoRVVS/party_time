@@ -10,6 +10,26 @@ class PartyItemsController < ApplicationController
     @party_item = PartyItem.find(params[:id])
   end
 
+
+  def new
+    @new_item = PartyItem.new
+  end
+
+  def create
+   @new_item = PartyItem.new(party_item_params)
+   @new_item.user = current_user
+
+   respond_to do |format|
+      if @new_item.save
+        format.html { redirect_to party_items_path(@new_item) }
+        format.json # Follows the classic Rails flow and look for a create.json view
+      else
+        format.html { render "party_items/new", status: :unprocessable_entity }
+        format.json # Follows the classic Rails flow and look for a create.json view
+      end
+    end
+  end
+
   def destroy
     @party_item = PartyItem.find(params[:id])
     @party_item.destroy
@@ -20,5 +40,9 @@ class PartyItemsController < ApplicationController
 
   def set_party_item
     @party_item = PartyItem.find(params[:id])
+  end
+
+  def party_item_params
+    params.require(:party_item).permit(:name, :description, :price)
   end
 end

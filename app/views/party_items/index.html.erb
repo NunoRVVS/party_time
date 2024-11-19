@@ -1,23 +1,23 @@
 
-<div class="container">
+<div class="container" data-controller="insert_in_list">
 
   <div data-controller="toggle" class="mt-5">
-    <button class="btn btn-outline-primary">Add party item</button>
-    <%= render "form", party_item: @party_item %>
+      <button data-action="click->toggle#flip" class="btn btn-outline-primary">Add party item</button>
+      <div data-toggle-target="togglableElement" class="">
+        <%= render "form", party_item: @party_item %>
+      </div>
   </div>
 
+  <div>
   <% @party_items.each do |item| %>
     <div class="card m-3" style="width: 18rem;">
-      <%# <img class="card-img-top" src="" alt="Card image cap"> %>
       <div class="card-body">
         <h5 class="card-title">Item name: <%= item.name %></h5>
         <p class="card-text">Item description: <%= item.description %></p>
         <p class="card-text">Price: <%= item.price %></p>
         <%= link_to "See Item", party_item_path(item) %>
-        <%# <%= link_to "Delete", restaurant_path(@restaurant),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-
       </div>
     </div>
   <% end %>
+  </div>
 </div>
