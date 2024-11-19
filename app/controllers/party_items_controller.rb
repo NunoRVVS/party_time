@@ -2,8 +2,8 @@ class PartyItemsController < ApplicationController
   # before_action :set_party_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @partyItems = PartyItem.all
-    @partyItem = PartyItem.new
+    @party_items = PartyItem.all
+    @party_item = PartyItem.new
   end
 
   def show
@@ -19,6 +19,6 @@ class PartyItemsController < ApplicationController
   private
 
   def set_party_item
-    @partyItem = PartyItem.find(params[:id])
+    @party_item = PartyItem.find(params[:id])
   end
 end

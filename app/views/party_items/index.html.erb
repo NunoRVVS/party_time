@@ -3,10 +3,10 @@
 
   <div data-controller="toggle" class="mt-5">
     <button class="btn btn-outline-primary">Add party item</button>
-    <%= render "form", party_item: @partyItem %>
+    <%= render "form", party_item: @party_item %>
   </div>
 
-  <% @partyItems.each do |item| %>
+  <% @party_items.each do |item| %>
     <div class="card m-3" style="width: 18rem;">
       <%# <img class="card-img-top" src="" alt="Card image cap"> %>
       <div class="card-body">
