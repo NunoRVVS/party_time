@@ -11,12 +11,12 @@ PartyItem.destroy_all
 User.destroy_all
 
 
-# 3.times do |t|
-#   user = User.create!(name: Faker::Name.name, email:"#{t}anemail@provider.com", password:"123456")
-#   p user
-# end
-# 10.times do
-#   item= PartyItem.create!( price: rand(30..150), name: Faker::Ancient.god, description: Faker::Books::Dune.quote, user: User.all.sample())
-#   p item
-# end
+3.times do |t|
+  user = User.create!(name: Faker::Name.name, email:"#{t}anemail@provider.com", password:"123456")
+  p user
+end
+10.times do
+  item= PartyItem.create!( price: rand(30..150), name: Faker::Ancient.god, description: Faker::Books::Dune.quote, user: User.all.sample())
+  p item
+end
 Ors
