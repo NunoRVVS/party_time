@@ -10,6 +10,9 @@ class PartyItemsController < ApplicationController
     @party_item = PartyItem.find(params[:id])
   end
 
+  def mylistings
+  
+  end
 
   def new
     @new_item = PartyItem.new
