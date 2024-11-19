@@ -1,4 +1,17 @@
 
-<% @partyItems.each do |item| %>
-  <h3><%= item.name %></h3>
-<% end  %>
+<div class="container d-grid">
+  <% @partyItems.each do |item| %>
+    <div class="card m-3" style="width: 18rem;">
+      <%# <img class="card-img-top" src="" alt="Card image cap"> %>
+      <div class="card-body">
+        <h5 class="card-title">Item name: <%= item.name %></h5>
+        <p class="card-text">Item description: <%= item.description %></p>
+        <p class="card-text">Price: <%= item.price %></p>
+        <%= link_to "See Item", party_item_path(item) %>
+        <%# <%= link_to "Delete", restaurant_path(@restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+      </div>
+    </div>
+  <% end %>
+</div>

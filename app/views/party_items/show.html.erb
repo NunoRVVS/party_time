@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4"><%= @partyItem.name %></h1>
+    <p class="lead"><%= @partyItem.description %></p>
+    <hr class="my-4">
+    <p>Price: <%= @partyItem.price %></p>
+    <p class="lead">
+
+      <%= link_to "Browse more items", party_items_path %>
+    </p>
+  </div>
+</div>

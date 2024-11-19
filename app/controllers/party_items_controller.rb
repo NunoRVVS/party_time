@@ -1,5 +1,4 @@
 class PartyItemsController < ApplicationController
-
   # before_action :set_party_item, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -12,5 +11,7 @@ class PartyItemsController < ApplicationController
 
   private
 
-
+  def set_party_item
+    @partyItem = PartyItem.find(params[:id])
+  end
 end
