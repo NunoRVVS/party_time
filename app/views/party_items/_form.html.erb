@@ -1,17 +1,6 @@
-<form>
-  <div class="form-group">
-    <label for="partyItemName">Party item name:</label>
-    <input type="input" class="form-control" id="partyItemName" aria-describedby="itemName" placeholder="...">
-    <small id="partyItemName" class="form-text text-muted">Enter the name of the new item</small>
-  </div>
-   <div class="form-group">
-    <label for="partyItemDescription">Party item description:</label>
-    < input type="input" class="form-control" id="partyItemDescription" aria-describedby="itemDescription" placeholder="...">
-    <small id="partyItemDescription" class="form-text text-muted">Description of the new item</small>
-   </div>
-   <div class="form-group">
-     <label for="partyItemPrice">Price</label>
-     <input type="number" class="form-control" id="partyItemPrice" placeholder="...">
-   </div>
-   <button type="submit" class="btn btn-primary">Save item</button>
-</form>
+<%= simple_form_for @party_item, data: { insert_in_list_target: "form", action: "submit->insert-in-list#send" } do |f| %>
+  <%=  f.input :name, as: :string  %>
+  <%=  f.input :description, as: :text  %>
+  <%=  f.input :price, as: :integer %>
+  <%=  f.submit "Create Item", class: "btn btn-warning" %>
+<% end %>
