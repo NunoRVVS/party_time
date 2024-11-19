@@ -1,5 +1,11 @@
 
-<div class="container d-grid">
+<div class="container">
+
+  <div data-controller="toggle" class="mt-5">
+    <button class="btn btn-outline-primary">Add party item</button>
+    <%= render "form", party_item: @partyItem %>
+  </div>
+
   <% @partyItems.each do |item| %>
     <div class="card m-3" style="width: 18rem;">
       <%# <img class="card-img-top" src="" alt="Card image cap"> %>
