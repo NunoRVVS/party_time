@@ -3,11 +3,14 @@
     <h1 class="display-4"><%= @party_item.name %></h1>
     <p class="lead"><%= @party_item.description %></p>
     <hr class="my-4">
-    <p>Price: <%= @party_item.price %></p>
+    <p>Ordered from <%= @order.start %> to <%= @order.end %> </p>
+    <p>By <%= @user.name %>
+
+
+    <p>Amount paid: <%= @order.amount %></p>
     <p class="lead">
 
       <%= link_to "Browse more items", party_items_path %>
-      <%= link_to "Delete", party_items_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     </p>
   </div>
 </div>

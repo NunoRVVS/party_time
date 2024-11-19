@@ -3,10 +3,17 @@ class PartyItemsController < ApplicationController
 
   def index
     @partyItems = PartyItem.all
+    @partyItem = PartyItem.new
   end
 
   def show
-    @partyItem = PartyItem.find(params[:id])
+    @party_item = PartyItem.find(params[:id])
+  end
+
+  def destroy
+    @party_item = PartyItem.find(params[:id])
+    @party_item.destroy
+    redirect_to party_items_path, status: :see_other
   end
 
   private
