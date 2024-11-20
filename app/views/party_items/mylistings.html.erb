@@ -12,7 +12,7 @@
             <p class="card-text">Item description: <%= item.description %></p>
             <p class="card-text">Price: <%= item.price %></p>
             <br/>
-            <%= link_to "See Item", party_item_path(item) %>
+            <%= link_to "See Item", party_item_path(item), class:'btn btn-primary' %>
           </div>
         </div>
       <% end %>
