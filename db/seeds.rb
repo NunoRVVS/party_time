@@ -11,11 +11,28 @@ PartyItem.destroy_all
 User.destroy_all
 
 
-3.times do |t|
+5.times do |t|
   user = User.create!(name: Faker::Name.name, email:"#{t}anemail@provider.com", password:"123456")
   p user
 end
-10.times do
-  item= PartyItem.create!( price: rand(30..150), name: Faker::Ancient.god, description: Faker::Books::Dune.quote, user: User.all.sample())
-  p item
-end
+
+PartyItem.create!( price: 12, name: "AfroWig", description: "The classical wig that made everyone look fashionable for a while. Now it makes people feel nostalgic. Be careful not to offend someone with the accent that comes natural while wearing it.", user: User.all.sample())
+PartyItem.create!( price: 15, name: "Star Sunglasses", description: "Glasses that are neither comfortable nor simple. You want them to wear with maybe a fur jacket or new-year gear.", user: User.all.sample())
+
+PartyItem.create!( name: "Big Boots",
+    price: 23,
+    description: "Boots that make you look taller. You will need to get both so that you don't fall.",
+    user: User.all.sample())
+PartyItem.create!( name: "Cowboy Suit",
+    price: 28,
+    description: "Head-to-tows suit to make you look like a cattle handler. The guns will make you cool. The smell is not included.",
+    user: User.all.sample())
+PartyItem.create!(name: "Witch Hat",
+    price: 14,
+    description: "Are spells your thing? You need something to hide a frog? Does your head not look pointy enough? This hat is for you!",
+    user: User.all.sample())
+PartyItem.create!( name: "Fairy God Mother dress",
+    price: 35,
+    description: "You don't own anything that is pink enough? Or too big for an elevator? Get this!",
+    user: User.all.sample())
+PartyItem.create!( name: "Cowboy Mustache", price: 7, description: "Something to comb in case you are bold.", user: User.all.sample())
