@@ -21,18 +21,18 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.user = current_user
     @order.party_item = @party_item
-    @order.amount = (@order.end - @order.start).to_i * @party_item.price
+    @order.amount = (@order.end_date - @order.start_date).to_i * @party_item.price
 
     if @order.save
       redirect_to order_path(@order), notice: 'Order Successfully Placed'
     else
-      render :new, alert: 'Error in placing your order'
+      render :new, status: :unprocessable_entity, alert: 'Error in placing your order'
     end
   end
 
   private
 
   def order_params
-    params.require(:order).permit(:start, :end, :amount)
+    params.require(:order).permit(:start_date, :end_date, :amount)
   end
 end
