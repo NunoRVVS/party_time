@@ -23,6 +23,7 @@
               <%= link_to "Check my listings", my_listings_path, class: "dropdown-item" %>
               <%= link_to "Check my orders", "/orders", class: "dropdown-item" %>
               <%= link_to "Check my details", "/users/edit", class: "dropdown-item" %>
+              <%= link_to "Check bookings on my items", orders_to_fulfill_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>

@@ -30,6 +30,9 @@ class OrdersController < ApplicationController
     end
   end
 
+  def orders_to_fulfill
+    @orders = Order.all.select{|order| order.party_item.user == current_user}
+  end
   private
 
   def order_params
