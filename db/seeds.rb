@@ -18,11 +18,11 @@ end
 
 PartyItem.create!( price: 12, name: "AfroWig", description: "The classical wig that made everyone look fashionable for a while. Now it makes people feel nostalgic. Be careful not to offend someone with the accent that comes natural while wearing it.", user: User.all.sample())
 PartyItem.create!( price: 15, name: "Star Sunglasses", description: "Glasses that are neither comfortable nor simple. You want them to wear with maybe a fur jacket or new-year gear.", user: User.all.sample())
-PartyItem.create!( name: "Cowboy Mustache", price: 7, description: "Something to comb in case you are bold.", user_id: User.all.sample())
+
 PartyItem.create!( name: "Big Boots",
     price: 23,
     description: "Boots that make you look taller. You will need to get both so that you don't fall.",
-    user_id: User.all.sample())
+    user: User.all.sample())
 PartyItem.create!( name: "Cowboy Suit",
     price: 28,
     description: "Head-to-tows suit to make you look like a cattle handler. The guns will make you cool. The smell is not included.",
@@ -35,3 +35,4 @@ PartyItem.create!( name: "Fairy God Mother dress",
     price: 35,
     description: "You don't own anything that is pink enough? Or too big for an elevator? Get this!",
     user: User.all.sample())
+PartyItem.create!( name: "Cowboy Mustache", price: 7, description: "Something to comb in case you are bold.", user: User.all.sample())
