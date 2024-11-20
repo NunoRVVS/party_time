@@ -1,23 +1,22 @@
-<div class="container d-flex flex-wrap">
-
-<div class="container">
-   <h2>Your Items Available for Booking</h2>
-  <div class="jumbotron">
-    <hr class="my-4">
-    <div class="d-flex flex-wrap">
-      <% @party_items.each do |item| %>
-      <% if item.user == @user %>
-      <div class="card m-3" style="width: 18rem;">
-        <%# <img class="card-img-top" src="" alt="Card image cap"> %>
-        <div class="card-body">
-          <h5 class="card-title">Item name: <%= item.name %></h5>
-          <p class="card-text">Item description: <%= item.description %></p>
-          <p class="card-text">Price: <%= item.price %></p>
-          <br/>
-          <%= link_to "See Item", party_item_path(item) %>
+<div class="container d-flex justify-content-center">
+  <div class="jumbotron" style="width:900px; padding: 20px;">
+    <h1 class="display-4 d-flex justify-content-center">Your Items Available for Booking</h1>
+      <hr class="my-4">
+      <div class="d-flex flex-wrap">
+        <% @party_items.each do |item| %>
+        <% if item.user == @user %>
+        <div class="card m-3" style="width: 18rem;">
+          <%# <img class="card-img-top" src="" alt="Card image cap"> %>
+          <div class="card-body">
+            <h5 class="card-title">Item name: <%= item.name %></h5>
+            <p class="card-text">Item description: <%= item.description %></p>
+            <p class="card-text">Price: <%= item.price %></p>
+            <br/>
+            <%= link_to "See Item", party_item_path(item) %>
+          </div>
         </div>
-      </div>
-    <% end %>
-    <% end %>
+      <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
