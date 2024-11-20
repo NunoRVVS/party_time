@@ -11,7 +11,8 @@ class PartyItemsController < ApplicationController
   end
 
   def mylistings
-  
+    @user = current_user
+    @party_items = PartyItem.all
   end
 
   def new

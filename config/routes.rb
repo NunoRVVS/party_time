@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show]
 
-  get "/partyitems/mylistings", to:"partyitems#mylistings", as: "my_listings"
+  get "/partyitems/mylistings", to:"party_items#mylistings", as: "my_listings"
 
 
 
