@@ -2,7 +2,7 @@ class PartyItemsController < ApplicationController
   # before_action :set_party_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @party_items = PartyItem.all
+    @party_items = PartyItem.all.sort_by {|item|  -item.id}
     @party_item = PartyItem.new
   end
 
