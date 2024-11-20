@@ -1,5 +1,5 @@
 <%= simple_form_for @party_item, data: { insert_in_list_target: "form", action: "submit->insert-in-list#send" } do |f| %>
-  <%=  f.input :name, as: :string  %>
+  <%=  f.input :name, as: :string %>
   <%=  f.input :description, as: :text  %>
   <%=  f.input :price, as: :integer %>
   <%=  f.submit "Create Item", class: "btn btn-warning" %>
