@@ -10,11 +10,10 @@ Rails.application.routes.draw do
   resources :party_items, only: [:index, :show, :create, :new, :edit, :destroy, :update] do
     resources :orders, only: [:new, :create]
   end
-
+  get "/orders/orders_to_fulfill", to:"orders#orders_to_fulfill", as: "orders_to_fulfill"
   resources :orders, only: [:index, :show]
 
   get "/partyitems/mylistings", to:"party_items#mylistings", as: "my_listings"
-
 
 
 end
