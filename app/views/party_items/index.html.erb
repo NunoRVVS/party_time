@@ -2,7 +2,8 @@
 
 <div class="container">
   <div class="jumbotron">
-                <div data-controller="toggle" class="mt-5" >
+      <div class="bg-body-secondary">
+                <div data-controller="toggle" class="p-3 mt-5">
                   <button class="btn btn-outline-primary" data-action="click->toggle#flip">Add party item</button>
 
 
@@ -11,8 +12,9 @@
                       </div>
 
                 </div>
+      </div>
     <hr class="my-4">
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap justify-content-center row row-6">
       <% @party_items.each do |item| %>
       <div class="card m-3" style="width: 18rem;">
         <%# <img class="card-img-top" src="" alt="Card image cap"> %>
