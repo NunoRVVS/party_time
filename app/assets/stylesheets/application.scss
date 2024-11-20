@@ -10,3 +10,30 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* Faz o conteúdo crescer para empurrar o footer */
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.navbar {
+  z-index: 1030; /* Garante que a navbar fique acima do conteúdo */
+}
