@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+
+.rounded-circle {
+  filter: none;
+}
+
+.rounded-circle:hover {
+  filter: rgb(211, 98, 98);
+  filter: sepia(60%);
+}
