@@ -14,7 +14,7 @@
           <p class="card-text">Booked by : <%= item.user.name %></p>
 
           <br/>
-          <%= link_to "See Order", order_path(item) %>
+          <%= link_to "See Order", order_path(item), class:'btn btn-primary' %>
         </div>
       </div>
     <% end %>

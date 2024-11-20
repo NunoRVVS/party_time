@@ -25,9 +25,10 @@
     <p>Price: <%= @party_item.price %></p>
     <p class="lead">
 
-      <%= link_to "Edit Item", edit_party_item_path(@party_item) %>
-      <%= link_to "Browse more items", party_items_path %>
-      <%= link_to "Delete", party_item_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <%= link_to "Book this Item", new_party_item_order_path(@party_item), class: 'btn btn-primary' %>
+      <%= link_to "Edit Item", edit_party_item_path(@party_item), class: 'btn btn-secondary'  %>
+      <%= link_to "Browse more items", party_items_path, class: 'btn btn-info' %>
+      <%= link_to "Delete", party_item_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-danger'%>
     </p>
   </div>
 </div>
