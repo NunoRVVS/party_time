@@ -6,29 +6,33 @@
       <li class="breadcrumb-item active"><%= @party_item.name %></li>
     </ol>
     <div class="mb-3">
+    <% rating = rand(1..5) %>
         <div>
-          <div class="ce-review-score">
-              <span class="score-highlighted">5</span> / <span>5</span>
+          <div class="ce-review-score edges" >
+            <span class="score-highlighted"><%= rating %> / 5</span> <%= link_to "✏️", edit_party_item_path(@party_item), class: 'action_icon_edit'  %>
           </div>
 
+
           <div class="star-rating">
-            <%= "⭐"*rand(1..5)%>
+            <%= "⭐"*rating%>
           </div>
         </div>
         <u>
-            <a><%= rand(1..5) %> reviews</a>
+            <a><%= rand(5..25) %> reviews</a>
         </u>
     </div>
     <h2 class="display-4"><%= @party_item.name %></h2>
     <p class="lead"><%= @party_item.description %></p>
     <hr class="my-4">
-    <p>Price: <%= @party_item.price %></p>
+    <div class="edges">
+    <p>Price: <%= @party_item.price %></p><%= link_to "🗑️", party_item_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'action_icon_del'%>
+    </div>
     <p class="lead">
 
-      <%= link_to "Book this Item", new_party_item_order_path(@party_item), class: 'btn btn-primary' %>
-      <%= link_to "Edit Item", edit_party_item_path(@party_item), class: 'btn btn-secondary'  %>
-      <%= link_to "Browse more items", party_items_path, class: 'btn btn-info' %>
-      <%= link_to "Delete", party_item_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-danger'%>
+      <%= link_to "Book me!", new_party_item_order_path(@party_item), class: 'btn btn-light' %>
+
+      <%= link_to "See more", party_items_path, class: 'btn btn-light btn-outline-primary' %>
+
     </p>
   </div>
 </div>
