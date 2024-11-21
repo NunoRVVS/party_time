@@ -8,5 +8,6 @@ export default class extends Controller {
   flip() {
     console.log("Hello from toggle_controller.js");
     this.togglableElementTarget.classList.toggle("d-none");
+    this.togglableElementTarget.classList.toggle("p-3");
   }
 }
