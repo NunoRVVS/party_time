@@ -43,8 +43,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_21_115920) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.date "start_date"
-    t.date "end_date"
+    t.date "start"
+    t.date "end"
     t.integer "amount"
     t.bigint "user_id", null: false
     t.bigint "party_item_id", null: false
