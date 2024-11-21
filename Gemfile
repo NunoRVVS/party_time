@@ -19,6 +19,7 @@ gem "faker"
 # Search
 gem "pg_search"
 
+#Images
 gem "cloudinary"
 
 
