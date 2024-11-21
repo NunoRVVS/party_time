@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="jumbotron">
+  <div class="jumbotro p-3 bg-white"  style="--bs-bg-opacity: .7git co;">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/">Home</a></li>
       <li class="breadcrumb-item active"><a href="/party_items">Party Items</a></li>
@@ -29,7 +29,7 @@
     <p class="lead"><%= @party_item.description %></p>
     <hr class="my-4">
     <div class="edges">
-    <p>Price: <%= @party_item.price %></p><%= link_to "🗑️", party_item_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'action_icon_del'%>
+    <p>Price: <%= @party_item.price %>€</p><%= link_to "🗑️", party_item_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'action_icon_del'%>
     </div>
     <p class="lead">
 
