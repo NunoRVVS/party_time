@@ -29,7 +29,7 @@
     <p class="lead"><%= @party_item.description %></p>
     <hr class="my-4">
     <div class="edges">
-    <p>Price: <%= @party_item.price %></p><%= link_to "🗑️", party_item_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'action_icon_del'%>
+    <p>Price: <%= @party_item.price %>€</p><%= link_to "🗑️", party_item_path(@party_item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'action_icon_del'%>
     </div>
     <p class="lead">
 
