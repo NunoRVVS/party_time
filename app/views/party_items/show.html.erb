@@ -19,7 +19,11 @@
             <a><%= rand(1..5) %> reviews</a>
         </u>
     </div>
+
     <h2 class="display-4"><%= @party_item.name %></h2>
+    <% if @party_item.photo.present?  %>
+    <%= cl_image_tag @party_item.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
     <p class="lead"><%= @party_item.description %></p>
     <hr class="my-4">
     <p>Price: <%= @party_item.price %></p>
