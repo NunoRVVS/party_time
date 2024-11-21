@@ -59,6 +59,6 @@ class PartyItemsController < ApplicationController
   end
 
   def party_item_params
-    params.require(:party_item).permit(:name, :description, :price)
+    params.require(:party_item).permit(:name, :description, :price, :photo)
   end
 end
