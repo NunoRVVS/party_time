@@ -3,6 +3,11 @@ class PartyItemsController < ApplicationController
 
   def index
     @party_items = PartyItem.all.sort_by {|item|  -item.id}
+    if params[:query].present?
+      @party_items = PartyItem.search_by_name(params[:query])
+    else
+      @party_items = PartyItem.all
+    end
     @party_item = PartyItem.new
   end
 
@@ -59,6 +64,6 @@ class PartyItemsController < ApplicationController
   end
 
   def party_item_params
-    params.require(:party_item).permit(:name, :description, :price)
+    params.require(:party_item).permit(:name, :description, :price, :photo)
   end
 end
