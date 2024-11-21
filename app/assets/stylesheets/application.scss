@@ -7,7 +7,10 @@
 @import "bootstrap";
 @import "font-awesome";
 
-// Seus arquivos SCSS parciais
-@import "components/index";           // Índice de componentes
-@import "pages/index";                // Índice de páginas
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+@import "components/card_img"
+
 
