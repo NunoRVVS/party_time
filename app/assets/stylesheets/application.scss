@@ -1,9 +1,9 @@
-// Graphical variables
+// Gráficas e configurações globais
 @import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
+@import "config/colors";              // Variáveis como $primary-color
+@import "config/bootstrap_variables"; // Customizações do Bootstrap
 
-// External libraries
+// Bibliotecas externas
 @import "bootstrap";
 @import "font-awesome";
 
@@ -12,4 +12,5 @@
 @import "pages/index";
 
 @import "components/card_img"
+
 

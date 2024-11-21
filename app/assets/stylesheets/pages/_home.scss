@@ -1,11 +1,32 @@
-// Specific CSS for your home-page
+body {
+  background: linear-gradient(45deg, #ff6f61, #ff9e80, #ffc107, #ffeb3b);
+  background-size: 400% 400%;
+  animation: gradientAnimation 7s ease infinite;
 
-.rounded-circle {
-  filter: none;
-}
 
-.rounded-circle:hover {
-  filter: rgb(211, 98, 98);
-  filter: sepia(60%);
-  transform: scale(1.1);
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .rounded-circle {
+    filter: none;
+  }
+  .rounded-circle:hover {
+    filter: rgb(211, 98, 98);
+    filter: sepia(60%);
+    transform: scale(1.1);
+  }
+
+
+  .btn {
+  
+    padding: 0.8rem 1.5rem;
+    color: $purple;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
 }
