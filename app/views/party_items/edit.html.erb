@@ -1,8 +1,12 @@
-
-<%= simple_form_for @party_item do |f| %>
-  <%=  f.input :name, as: :string  %>
-  <%=  f.input :description, as: :text  %>
-  <%=  f.input :price, as: :integer %>
-  <%=  f.input :photo, as: :file %>
-  <%=  f.submit "Update Item", class: "btn btn-success" %>
-<% end %>
+<div class="container d-flex justify-content-center bg-white" style="opacity:0.7">
+  <div class="jumbotron" style="width:900px; padding: 20px;">
+  <hr class="my-4">
+  <%= simple_form_for @party_item do |f| %>
+    <%=  f.input :name, as: :string  %>
+    <%=  f.input :description, as: :text  %>
+    <%=  f.input :price, as: :integer %>
+    <%=  f.input :photo, as: :file %>
+    <%=  f.submit "Update Item", class: "btn btn-success" %>
+  <% end %>
+ </div>
+</div>

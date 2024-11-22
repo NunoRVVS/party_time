@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  margin: 0;
   display: flex;
   flex-direction: column;
 }
@@ -16,4 +15,12 @@ html, body {
 
 .list-inline-item {
   color: white
+}
+
+.fab {
+  font-size: larger;
+}
+
+.fab:hover {
+  color: rgb(0, 81, 255);
 }
