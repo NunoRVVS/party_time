@@ -9,5 +9,6 @@ export default class extends Controller {
     console.log("Hello from toggle_controller.js");
     this.togglableElementTarget.classList.toggle("d-none");
     this.togglableElementTarget.classList.toggle("p-3");
+    // this.togglableElementTarget.classList.toggle("slide");
   }
 }
