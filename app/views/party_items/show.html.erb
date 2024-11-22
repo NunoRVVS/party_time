@@ -21,11 +21,12 @@
             <a><%= rand(5..25) %> reviews</a>
         </u>
     </div>
-
+    <div class="title-image-holder">
     <h2 class="display-4"><%= @party_item.name %></h2>
-    <% if @party_item.photo.present?  %>
-    <%= cl_image_tag @party_item.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
+      <% if @party_item.photo.present?  %>
+      <%= cl_image_tag @party_item.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </div>
     <p class="lead"><%= @party_item.description %></p>
     <hr class="my-4">
     <div class="edges">

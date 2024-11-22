@@ -1,2 +1,17 @@
 // Import page-specific CSS files here.
 @import "home";
+@keyframes slideToPage{
+  from{
+    transform: translateX(600px) translateY(-200px) scale(0.1);
+  }
+  to{
+    transform: translateX(0px) translateY(0px) scale(0.9);
+  }
+
+}
+
+.slide{
+  // background-color: rgba(18, 224, 231, 0.3);
+
+  animation: slideToPage 0.5s ease-in 0s 1 normal none;
+}

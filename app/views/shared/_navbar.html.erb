@@ -1,7 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-5 sticky-top" style="background-image: linear-gradient(to right, rgba(18, 224, 231, 0.7), rgba(188, 13, 237, 0.8))";>
-
-    <div class="container-fluid">
-      <div class="logoItem d-flex ms-3">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-5 sticky-top" style="background-image: linear-gradient(to right, rgba(18, 224, 231, 0.7), rgba(216, 150, 234, 0.7))";>
+    <div class="container-fluid container">
+      <div class="logoItem d-flex">
         <%= link_to "/", class: "navbar-brand" do %>
             <%= image_tag "logo.jpg", class: "avatar", alt: "dropdown menu", style: "height:50px; width:50px" %>
         <% end %>
@@ -16,9 +15,11 @@
           <% if user_signed_in? %>
             <li class="nav-item active">
               <%# <%= link_to "Create your party item", "/party_items/", class: "nav-link" %>
-            </li>
-            <button class="btn btn-outline-primary me-3" data-action="click->toggle#flip">Add party item</button>
-            <li class="nav-item dropdown mt-2">
+            </li>     
+            <button class="btn btn-outline-primary d-none" data-toggle-target="toggableButton" data-action="click->toggle#flip">Add party item</button>
+
+            <li class="nav-item dropdown">
+
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= image_tag "th.jpg", class: "avatar", alt: "dropdown menu" %>
             </a>
