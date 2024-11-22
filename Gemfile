@@ -15,6 +15,8 @@ gem "devise"
 
 gem "faker"
 
+# autorization
+gem "pundit"
 
 # Search
 gem "pg_search"
