@@ -15,7 +15,7 @@
           <% if user_signed_in? %>
             <li class="nav-item active">
               <%# <%= link_to "Create your party item", "/party_items/", class: "nav-link" %>
-            </li>     
+            </li>
             <button class="btn btn-outline-primary d-none" data-toggle-target="toggableButton" data-action="click->toggle#flip">Add party item</button>
 
             <li class="nav-item dropdown">
@@ -24,10 +24,10 @@
               <%= image_tag "th.jpg", class: "avatar", alt: "dropdown menu" %>
             </a>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Check my listings", my_listings_path, class: "dropdown-item" %>
-                <%= link_to "Check my orders", "/orders", class: "dropdown-item" %>
-                <%= link_to "Check my details", "/users/edit", class: "dropdown-item" %>
-                <%= link_to "Check bookings on my items", orders_to_fulfill_path, class: "dropdown-item" %>
+                <%= link_to "My Listings", my_listings_path, class: "dropdown-item" %>
+                <%= link_to "My Bookings", "/orders", class: "dropdown-item" %>
+                <%= link_to "My Details", "/users/edit", class: "dropdown-item" %>
+                <%= link_to "Bookings on my items", orders_to_fulfill_path, class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
               </div>
             </li>
