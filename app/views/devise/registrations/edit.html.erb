@@ -1,6 +1,6 @@
 
-<div class="container d-flex justify-content-center bg-white" style="opacity:0.7">
-<div class="jumbotron" style="width:900px; padding: 20px;">
+<div class="container d-flex justify-content-center ">
+<div class="jumbotron bg-white rounded" style="width:900px; padding: 20px; opacity:0.7">
   <h1 class="display-4 d-flex justify-content-center">Edit <%= resource_name.to_s.humanize %></h1>
   <hr class="my-4">
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
