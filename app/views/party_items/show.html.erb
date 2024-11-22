@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="jumbotro p-3 bg-white"  style="--bs-bg-opacity: .7git co;">
+  <div class="jumbotro p-3 bg-white"  style="--bs-bg-opacity: .7git co; width:70%;margin auto;">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/">Home</a></li>
       <li class="breadcrumb-item active"><a href="/party_items">Party Items</a></li>
@@ -8,14 +8,14 @@
     <div class="mb-3">
     <% rating = 5 - rand(0...5) %>
     <% whitestars = 5 - rating %>
-       <div class="d-flex justify-content-left mt-3 bg-white" style="--bs-bg-opacity:0.7">
+       <div class="d-flex justify-content-left mt-3  p-3 bg-white" style="--bs-bg-opacity:0.7">
         <div class="d-flex" style="height: 19rem">
           <% if @party_item.photo.present?  %>
           <%= cl_image_tag @party_item.photo.key,  crop: :fill, class: "card-img-top"%>
           <% end %>
         </div>
 
-        <div class="title-image-holder ms-5" style="width:350px">
+        <div class="title-image-holder ms-5" style="width:550px">
           <div class="ce-review-score edges">
             <div class="star-rating">
             <p><%= rand(5..25) %> reviews</p>
