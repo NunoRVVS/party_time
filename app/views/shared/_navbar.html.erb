@@ -18,7 +18,9 @@
             <li class="nav-item active">
               <%# <%= link_to "Create your party item", "/party_items/", class: "nav-link" %>
             </li>
-            <button class="btn btn-outline-primary mx-3" data-action="click->toggle#flip">Add party item</button>
+      
+            <button class="btn btn-outline-primary d-none" data-toggle-target="toggableButton" data-action="click->toggle#flip">Add party item</button>
+
             <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= image_tag "th.jpg", class: "avatar", alt: "dropdown menu" %>
